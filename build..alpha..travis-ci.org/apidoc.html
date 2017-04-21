@@ -1,0 +1,2935 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://loopjs.com"
+
+    >loop-drop (v2.17.2)</a>
+</h1>
+<h4>MIDI looper, modular synth and sampler app built around Novation Launchpad controller (electron app).</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop">module loop-drop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.attribute_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>attribute_hook
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.audio_meter">
+            function <span class="apidocSignatureSpan">loop-drop.</span>audio_meter
+            <span class="apidocSignatureSpan">(value, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.editable_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>editable_hook
+            <span class="apidocSignatureSpan">(param, selected, onChange)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.flag_param">
+            function <span class="apidocSignatureSpan">loop-drop.</span>flag_param
+            <span class="apidocSignatureSpan">(target, flag)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.grid_state_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>grid_state_hook
+            <span class="apidocSignatureSpan">(gridState)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_class_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>observ_class_hook
+            <span class="apidocSignatureSpan">(obs, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_style_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>observ_style_hook
+            <span class="apidocSignatureSpan">(obs, prop, getValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_value_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>observ_value_hook
+            <span class="apidocSignatureSpan">(obs, getValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.query_param">
+            function <span class="apidocSignatureSpan">loop-drop.</span>query_param
+            <span class="apidocSignatureSpan">(target, query, defaultValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>rename_hook
+            <span class="apidocSignatureSpan">(obs, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_widget">
+            function <span class="apidocSignatureSpan">loop-drop.</span>rename_widget
+            <span class="apidocSignatureSpan">(fileName, saveRename, cancelRename, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.sub_loop">
+            function <span class="apidocSignatureSpan">loop-drop.</span>sub_loop
+            <span class="apidocSignatureSpan">(observ, render)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.wave_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>wave_hook
+            <span class="apidocSignatureSpan">(context, src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>attribute_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>audio_meter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>editable_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>flag_param.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>grid_state_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>jsmn</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>observ_class_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>observ_style_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>observ_value_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>query_param.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>rename_hook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>rename_widget.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>sub_loop.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">loop-drop.</span>wave_hook.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.attribute_hook">module loop-drop.attribute_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.attribute_hook.attribute_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>attribute_hook
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.attribute_hook.prototype">module loop-drop.attribute_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.attribute_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.attribute_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, prev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.attribute_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.attribute_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">loop-drop.attribute_hook.prototype.</span>_type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.audio_meter">module loop-drop.audio_meter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.audio_meter.audio_meter">
+            function <span class="apidocSignatureSpan">loop-drop.</span>audio_meter
+            <span class="apidocSignatureSpan">(value, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.audio_meter.prototype">module loop-drop.audio_meter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.audio_meter.prototype.destroy">
+            function <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.audio_meter.prototype.init">
+            function <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.audio_meter.prototype.update">
+            function <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>update
+            <span class="apidocSignatureSpan">(prev, elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.editable_hook">module loop-drop.editable_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.editable_hook.editable_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>editable_hook
+            <span class="apidocSignatureSpan">(param, selected, onChange)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.editable_hook.prototype">module loop-drop.editable_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.editable_hook.prototype.cancel">
+            function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>cancel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.editable_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, current)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.editable_hook.prototype.save">
+            function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>save
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.editable_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.flag_param">module loop-drop.flag_param</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.flag_param.flag_param">
+            function <span class="apidocSignatureSpan">loop-drop.</span>flag_param
+            <span class="apidocSignatureSpan">(target, flag)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.flag_param.prototype">module loop-drop.flag_param.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.flag_param.prototype.read">
+            function <span class="apidocSignatureSpan">loop-drop.flag_param.prototype.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.flag_param.prototype.set">
+            function <span class="apidocSignatureSpan">loop-drop.flag_param.prototype.</span>set
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.grid_state_hook">module loop-drop.grid_state_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.grid_state_hook.grid_state_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>grid_state_hook
+            <span class="apidocSignatureSpan">(gridState)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.grid_state_hook.prototype">module loop-drop.grid_state_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.grid_state_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.grid_state_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, prev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.grid_state_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.grid_state_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.jsmn">module loop-drop.jsmn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.jsmn.eval">
+            function <span class="apidocSignatureSpan">loop-drop.jsmn.</span>eval
+            <span class="apidocSignatureSpan">(object, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.jsmn.parse">
+            function <span class="apidocSignatureSpan">loop-drop.jsmn.</span>parse
+            <span class="apidocSignatureSpan">(literal)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.jsmn.stringify">
+            function <span class="apidocSignatureSpan">loop-drop.jsmn.</span>stringify
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.observ_class_hook">module loop-drop.observ_class_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_class_hook.observ_class_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>observ_class_hook
+            <span class="apidocSignatureSpan">(obs, className)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.observ_class_hook.prototype">module loop-drop.observ_class_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_class_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.observ_class_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, prev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_class_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.observ_class_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.observ_style_hook">module loop-drop.observ_style_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_style_hook.observ_style_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>observ_style_hook
+            <span class="apidocSignatureSpan">(obs, prop, getValue)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.observ_style_hook.prototype">module loop-drop.observ_style_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_style_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.observ_style_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, prev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_style_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.observ_style_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.observ_value_hook">module loop-drop.observ_value_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_value_hook.observ_value_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>observ_value_hook
+            <span class="apidocSignatureSpan">(obs, getValue)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.observ_value_hook.prototype">module loop-drop.observ_value_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_value_hook.prototype.handleEvent">
+            function <span class="apidocSignatureSpan">loop-drop.observ_value_hook.prototype.</span>handleEvent
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_value_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.observ_value_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, prev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.observ_value_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.observ_value_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.query_param">module loop-drop.query_param</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.query_param.query_param">
+            function <span class="apidocSignatureSpan">loop-drop.</span>query_param
+            <span class="apidocSignatureSpan">(target, query, defaultValue)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.query_param.prototype">module loop-drop.query_param.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.query_param.prototype.read">
+            function <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.query_param.prototype.set">
+            function <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>set
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.query_param.prototype.write">
+            function <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>write
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.rename_hook">module loop-drop.rename_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.rename_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>rename_hook
+            <span class="apidocSignatureSpan">(obs, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.cancel">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>cancel
+            <span class="apidocSignatureSpan">(obs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.get">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>get
+            <span class="apidocSignatureSpan">(obs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.rename">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>rename
+            <span class="apidocSignatureSpan">(obs, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.save">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>save
+            <span class="apidocSignatureSpan">(obs)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.rename_hook.prototype">module loop-drop.rename_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.prototype.cancel">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>cancel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, current)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.prototype.rename">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>rename
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.prototype.save">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>save
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.rename_widget">module loop-drop.rename_widget</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_widget.rename_widget">
+            function <span class="apidocSignatureSpan">loop-drop.</span>rename_widget
+            <span class="apidocSignatureSpan">(fileName, saveRename, cancelRename, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.rename_widget.prototype">module loop-drop.rename_widget.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_widget.prototype.getValue">
+            function <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>getValue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_widget.prototype.init">
+            function <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.rename_widget.prototype.update">
+            function <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>update
+            <span class="apidocSignatureSpan">(prev, element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.sub_loop">module loop-drop.sub_loop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.sub_loop.sub_loop">
+            function <span class="apidocSignatureSpan">loop-drop.</span>sub_loop
+            <span class="apidocSignatureSpan">(observ, render)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.sub_loop.prototype">module loop-drop.sub_loop.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.sub_loop.prototype.destroy">
+            function <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(prev, elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.sub_loop.prototype.init">
+            function <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.sub_loop.prototype.update">
+            function <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>update
+            <span class="apidocSignatureSpan">(prev, elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.wave_hook">module loop-drop.wave_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.wave_hook.wave_hook">
+            function <span class="apidocSignatureSpan">loop-drop.</span>wave_hook
+            <span class="apidocSignatureSpan">(context, src)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.loop-drop.wave_hook.prototype">module loop-drop.wave_hook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.wave_hook.prototype.hook">
+            function <span class="apidocSignatureSpan">loop-drop.wave_hook.prototype.</span>hook
+            <span class="apidocSignatureSpan">(node, prop, prev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.loop-drop.wave_hook.prototype.unhook">
+            function <span class="apidocSignatureSpan">loop-drop.wave_hook.prototype.</span>unhook
+            <span class="apidocSignatureSpan">(node, prop, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">loop-drop.wave_hook.prototype.</span>_type</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop" id="apidoc.module.loop-drop">module loop-drop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.attribute_hook" id="apidoc.element.loop-drop.attribute_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>attribute_hook
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AttributeHook(value) {
+    if (!(this instanceof AttributeHook)) {
+        return new AttributeHook(value);
+    }
+    this.value = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.audio_meter" id="apidoc.element.loop-drop.audio_meter">
+        function <span class="apidocSignatureSpan">loop-drop.</span>audio_meter
+        <span class="apidocSignatureSpan">(value, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AudioMeter(value, opts){
+  if (!(this instanceof AudioMeter)) return new AudioMeter(value, opts)
+  this.value = value
+  this.opts = opts
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.editable_hook" id="apidoc.element.loop-drop.editable_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>editable_hook
+        <span class="apidocSignatureSpan">(param, selected, onChange)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EditableHook(param, selected, onChange) {
+  if (!(this instanceof EditableHook)) return new EditableHook(param, selected, onChange)
+
+  if (typeof selected === &#x27;function&#x27;){
+    onChange = selected
+    selected = null
+  }
+
+  this.selected = selected
+  this.onChange = onChange
+  this.param = param
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.flag_param" id="apidoc.element.loop-drop.flag_param">
+        function <span class="apidocSignatureSpan">loop-drop.</span>flag_param
+        <span class="apidocSignatureSpan">(target, flag)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FlagParam(target, flag){
+  if (!(this instanceof FlagParam)) return new FlagParam(target, flag)
+  this.target = target
+  this.flag = flag
+  this.context = target.context
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.grid_state_hook" id="apidoc.element.loop-drop.grid_state_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>grid_state_hook
+        <span class="apidocSignatureSpan">(gridState)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GridStateHook(gridState){
+  if (!(this instanceof GridStateHook)) return new GridStateHook(gridState)
+  this.gridState = gridState
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_class_hook" id="apidoc.element.loop-drop.observ_class_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>observ_class_hook
+        <span class="apidocSignatureSpan">(obs, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservClassHook(obs, className){
+  if (!(this instanceof ObservClassHook)) return new ObservClassHook(obs, className)
+  this.obs = obs
+  this.className = className
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_style_hook" id="apidoc.element.loop-drop.observ_style_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>observ_style_hook
+        <span class="apidocSignatureSpan">(obs, prop, getValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservStyleHook(obs, prop, getValue){
+  if (!(this instanceof ObservStyleHook)) return new ObservStyleHook(obs, prop, getValue)
+  this.obs = obs
+  this.prop = prop
+  this.getValue = getValue
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_value_hook" id="apidoc.element.loop-drop.observ_value_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>observ_value_hook
+        <span class="apidocSignatureSpan">(obs, getValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservValueHook(obs, getValue){
+  if (!(this instanceof ObservValueHook)) return new ObservValueHook(obs, getValue)
+  this.obs = obs
+  this.getValue = getValue
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.query_param" id="apidoc.element.loop-drop.query_param">
+        function <span class="apidocSignatureSpan">loop-drop.</span>query_param
+        <span class="apidocSignatureSpan">(target, query, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function QueryParam(target, query, defaultValue){
+  if (!(this instanceof QueryParam)) return new QueryParam(target, query, defaultValue)
+  this.target = target
+  this.query = query
+  this.defaultValue = defaultValue
+  this.context = target.context
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook" id="apidoc.element.loop-drop.rename_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>rename_hook
+        <span class="apidocSignatureSpan">(obs, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RenameHook(obs, options) {
+  if (!(this instanceof RenameHook)) return new RenameHook(obs, options)
+  this.enabled = options.enabled
+  this.onChange = options.onChange
+  this.object = obs
+  lookup.set(obs, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_widget" id="apidoc.element.loop-drop.rename_widget">
+        function <span class="apidocSignatureSpan">loop-drop.</span>rename_widget
+        <span class="apidocSignatureSpan">(fileName, saveRename, cancelRename, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renameElement(fileName, saveRename, cancelRename, data){
+  if (!(this instanceof renameElement)) return new renameElement(fileName, saveRename, cancelRename, data)
+  this.fileName = fileName
+  this.saveRename = saveRename
+  this.cancelRename = cancelRename
+  this.data = data
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.sub_loop" id="apidoc.element.loop-drop.sub_loop">
+        function <span class="apidocSignatureSpan">loop-drop.</span>sub_loop
+        <span class="apidocSignatureSpan">(observ, render)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SubLoop(observ, render) {
+  if (!(this instanceof SubLoop)) return new SubLoop(observ, render)
+  this.observ = observ
+  this.render = render
+  this.releases = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.wave_hook" id="apidoc.element.loop-drop.wave_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>wave_hook
+        <span class="apidocSignatureSpan">(context, src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WaveHook(context, src) {
+  if (!(this instanceof WaveHook)) {
+    return new WaveHook(context, src)
+  }
+  this.context = context
+  this.src = src
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.attribute_hook" id="apidoc.module.loop-drop.attribute_hook">module loop-drop.attribute_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.attribute_hook.attribute_hook" id="apidoc.element.loop-drop.attribute_hook.attribute_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>attribute_hook
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AttributeHook(value) {
+    if (!(this instanceof AttributeHook)) {
+        return new AttributeHook(value);
+    }
+    this.value = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.attribute_hook.prototype" id="apidoc.module.loop-drop.attribute_hook.prototype">module loop-drop.attribute_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.attribute_hook.prototype.hook" id="apidoc.element.loop-drop.attribute_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.attribute_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, prev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, prev) {
+
+    node.setAttribute(prop, this.value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.attribute_hook.prototype.unhook" id="apidoc.element.loop-drop.attribute_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.attribute_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next) {
+    if (next &#x26;&#x26; next._type === &#x27;AttributeHook&#x27;) {
+        return;
+    }
+    node.removeAttribute(prop)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.audio_meter" id="apidoc.module.loop-drop.audio_meter">module loop-drop.audio_meter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.audio_meter.audio_meter" id="apidoc.element.loop-drop.audio_meter.audio_meter">
+        function <span class="apidocSignatureSpan">loop-drop.</span>audio_meter
+        <span class="apidocSignatureSpan">(value, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AudioMeter(value, opts){
+  if (!(this instanceof AudioMeter)) return new AudioMeter(value, opts)
+  this.value = value
+  this.opts = opts
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.audio_meter.prototype" id="apidoc.module.loop-drop.audio_meter.prototype">module loop-drop.audio_meter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.audio_meter.prototype.destroy" id="apidoc.element.loop-drop.audio_meter.prototype.destroy">
+        function <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (){
+  unbind(this.state)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+module.exports = function (obs) {
+  Object.keys(obs).forEach(function (key) {
+    if (obs[key] &#x26;&#x26; typeof obs[key].destroy === &#x27;function&#x27;) {
+      obs[key].<span class="apidocCodeKeywordSpan">destroy</span>()
+    }
+  })
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.audio_meter.prototype.init" id="apidoc.element.loop-drop.audio_meter.prototype.init">
+        function <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (){
+  var element = createElement(render(this.opts))
+
+  var state = this.state = {
+    value: this.value,
+    opts: this.opts,
+    lastL: 0,
+    lastR: 0,
+    update: function(){
+      var current = state.value() || [state.opts.min, state.opts.min]
+      var l = abs(current[0], state.opts)
+      var r = abs(current[1], state.opts)
+      updateActive(element.childNodes[0].childNodes, l, state.lastL)
+      updateActive(element.childNodes[1].childNodes, r, state.lastR)
+      state.lastL = l
+      state.lastR  = r
+    }
+  }
+  bind(this.state)
+  return element
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return createElement(h(&#x27;div&#x27;))
+}
+}
+
+SubLoop.prototype.update = function (prev, elem) {
+this.releases = prev.releases
+if (!eq(this.observ, prev.observ) || this.render !== prev.render) {
+  return this.<span class="apidocCodeKeywordSpan">init</span>()
+}
+}
+
+SubLoop.prototype.destroy = function (prev, elem) {
+while (this.releases.length) {
+  this.releases.pop()()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.audio_meter.prototype.update" id="apidoc.element.loop-drop.audio_meter.prototype.update">
+        function <span class="apidocSignatureSpan">loop-drop.audio_meter.prototype.</span>update
+        <span class="apidocSignatureSpan">(prev, elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (prev, elem){
+  this.state = prev.state
+  this.state.value = this.value
+  this.state.opts = this.opts
+  if (this.value !== prev.value){
+    bind(this.state)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return renderer.target
+
+// scoped
+
+function update () {
+  // render!
+  renderer.<span class="apidocCodeKeywordSpan">update</span>(project)
+}
+}
+
+function ensureProject (path, cb) {
+rootContext.fs.exists(path, function (exists) {
+  if (exists) {
+    cb()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.editable_hook" id="apidoc.module.loop-drop.editable_hook">module loop-drop.editable_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.editable_hook.editable_hook" id="apidoc.element.loop-drop.editable_hook.editable_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>editable_hook
+        <span class="apidocSignatureSpan">(param, selected, onChange)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EditableHook(param, selected, onChange) {
+  if (!(this instanceof EditableHook)) return new EditableHook(param, selected, onChange)
+
+  if (typeof selected === &#x27;function&#x27;){
+    onChange = selected
+    selected = null
+  }
+
+  this.selected = selected
+  this.onChange = onChange
+  this.param = param
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.editable_hook.prototype" id="apidoc.module.loop-drop.editable_hook.prototype">module loop-drop.editable_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.editable_hook.prototype.cancel" id="apidoc.element.loop-drop.editable_hook.prototype.cancel">
+        function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>cancel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function (){
+  this.node.textContent = read(this.param)
+  clearSelection()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var hook = this.hook
+  if (hook){
+    if (e.type === &#x27;keydown&#x27;){
+      if (e.keyCode === 13){ // enter
+        hook.save()
+        e.preventDefault()
+      } else if (e.keyCode === 27){ // esc
+        hook.<span class="apidocCodeKeywordSpan">cancel</span>()
+      }
+    } else if (e.type === &#x27;blur&#x27;){
+      hook.save()
+    }
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.editable_hook.prototype.hook" id="apidoc.element.loop-drop.editable_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, current)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, current){
+  if (current){
+    this.listener = current.listener
+    this.listener.hook = this
+  } else {
+
+    this.listener = {
+      handleEvent: handleEvent,
+      hook: this
+    }
+    node.contentEditable = true
+    node.textContent = read(this.param)
+    node.addEventListener(&#x27;blur&#x27;, this.listener)
+    node.addEventListener(&#x27;keydown&#x27;, this.listener)
+  }
+
+  if (this.selected &#x26;&#x26; document.activeElement !== node) {
+    setTimeout(function() {
+      node.focus()
+      selectInside(node)
+    }, 10)
+  }
+
+  this.node = node
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.editable_hook.prototype.save" id="apidoc.element.loop-drop.editable_hook.prototype.save">
+        function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>save
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (){
+
+  var value = read(this.param)
+  this.lastValue = value
+  this.value = this.node.textContent.trim()
+
+  this.param.set(this.value)
+
+  clearSelection()
+
+  if (this.onChange){
+    this.onChange(this.lastValue, this.value, this.param)
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function handleEvent(e){
+var hook = this.hook
+if (hook){
+  if (e.type === &#x27;keydown&#x27;){
+    if (e.keyCode === 13){ // enter
+      hook.<span class="apidocCodeKeywordSpan">save</span>()
+      e.preventDefault()
+    } else if (e.keyCode === 27){ // esc
+      hook.cancel()
+    }
+  } else if (e.type === &#x27;blur&#x27;){
+    hook.save()
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.editable_hook.prototype.unhook" id="apidoc.element.loop-drop.editable_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.editable_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next){
+  if (!next){
+    node.contentEditable = false
+    node.removeEventListener(&#x27;blur&#x27;, this.listener)
+    node.removeEventListener(&#x27;keydown&#x27;, this.listener)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.flag_param" id="apidoc.module.loop-drop.flag_param">module loop-drop.flag_param</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.flag_param.flag_param" id="apidoc.element.loop-drop.flag_param.flag_param">
+        function <span class="apidocSignatureSpan">loop-drop.</span>flag_param
+        <span class="apidocSignatureSpan">(target, flag)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FlagParam(target, flag){
+  if (!(this instanceof FlagParam)) return new FlagParam(target, flag)
+  this.target = target
+  this.flag = flag
+  this.context = target.context
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.flag_param.prototype" id="apidoc.module.loop-drop.flag_param.prototype">module loop-drop.flag_param.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.flag_param.prototype.read" id="apidoc.element.loop-drop.flag_param.prototype.read">
+        function <span class="apidocSignatureSpan">loop-drop.flag_param.prototype.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (){
+  var current = read(this.target)
+  return Array.isArray(current) ? !!~current.indexOf(this.flag) : false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return JSON.parse(JSON.stringify(obj))
+}
+
+function read(target){
+  if (typeof target === &#x27;function&#x27;){
+    return target()
+  } else if (target &#x26;&#x26; target.read){
+    return target.<span class="apidocCodeKeywordSpan">read</span>()
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.flag_param.prototype.set" id="apidoc.element.loop-drop.flag_param.prototype.set">
+        function <span class="apidocSignatureSpan">loop-drop.flag_param.prototype.</span>set
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (value){
+  var current = read(this.target)
+  var val = Array.isArray(current) ? current.slice() : []
+
+  var index = val.indexOf(this.flag)
+  var currentState = !!~index
+  var newState = !!value
+
+  if (newState !== currentState){
+    if (newState){
+      val.push(this.flag)
+    } else {
+      val.splice(index, 1)
+    }
+  }
+
+  this.target.set(val)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// midi ports
+var midiPorts = Observ()
+midiPorts.open = MidiStream
+midiPorts.openInput = MidiStream.openInput
+midiPorts.openOutput = MidiStream.openOutput
+
+MidiStream.watchPortNames(function (ports) {
+midiPorts.<span class="apidocCodeKeywordSpan">set</span>(ports)
+})
+
+// create root context
+var audioContext = new global.AudioContext()
+var nodes = require(&#x27;./nodes&#x27;)
+var rootContext = window.rootContext = {
+fs: fs,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.grid_state_hook" id="apidoc.module.loop-drop.grid_state_hook">module loop-drop.grid_state_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.grid_state_hook.grid_state_hook" id="apidoc.element.loop-drop.grid_state_hook.grid_state_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>grid_state_hook
+        <span class="apidocSignatureSpan">(gridState)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GridStateHook(gridState){
+  if (!(this instanceof GridStateHook)) return new GridStateHook(gridState)
+  this.gridState = gridState
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.grid_state_hook.prototype" id="apidoc.module.loop-drop.grid_state_hook.prototype">module loop-drop.grid_state_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.grid_state_hook.prototype.hook" id="apidoc.element.loop-drop.grid_state_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.grid_state_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, prev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, prev){
+  var self = this
+  if (!prev || prev.gridState !== self.gridState){
+    self.removeListener &#x26;&#x26; self.removeListener()
+    if (self.gridState){
+      nextTick(function(){
+        self.removeListener = watch(self.gridState, updateRows.bind(node))
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.grid_state_hook.prototype.unhook" id="apidoc.element.loop-drop.grid_state_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.grid_state_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next){
+  if (next){
+    next.removeListener = this.removeListener
+  } else {
+    this.removeListener &#x26;&#x26; this.removeListener()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.jsmn" id="apidoc.module.loop-drop.jsmn">module loop-drop.jsmn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.jsmn.eval" id="apidoc.element.loop-drop.jsmn.eval">
+        function <span class="apidocSignatureSpan">loop-drop.jsmn.</span>eval
+        <span class="apidocSignatureSpan">(object, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function xval(object, context){
+  if (Array.isArray(object)){
+    return object.map(function(x){
+      return xval(x, context)
+    })
+  } else if (object instanceof Object) {
+    if (object.$){
+      return safeEval(object.$, context)
+    } else {
+      var res = {}
+      Object.keys(object).forEach(function(key){
+        res[key] = xval(object[key], context)
+      })
+      return res
+    }
+  } else {
+    return object
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.jsmn.parse" id="apidoc.element.loop-drop.jsmn.parse">
+        function <span class="apidocSignatureSpan">loop-drop.jsmn.</span>parse
+        <span class="apidocSignatureSpan">(literal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (literal){
+  literal = literal.replace(/\{\{([\w\W]*?)\}\}/g, function(_, exp){
+    return &#x27;{$: &#x27; + JSON.stringify(fixIndent(exp)) + &#x27;}&#x27;
+  })
+  return safeEval(&#x27;j = {&#x27; + literal + &#x27;}&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  initialized = true
+  return obs
+}
+
+function tryParse(data) {
+  try {
+    return JSON.<span class="apidocCodeKeywordSpan">parse</span>(data)
+  } catch (ex) {
+    return PARSE_ERROR
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.jsmn.stringify" id="apidoc.element.loop-drop.jsmn.stringify">
+        function <span class="apidocSignatureSpan">loop-drop.jsmn.</span>stringify
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stringify = function (object){
+  return getObjectContent(object).trim()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function ensureProject (path, cb) {
+  rootContext.fs.exists(path, function (exists) {
+    if (exists) {
+      cb()
+    } else {
+      rootContext.fs.writeFile(path, JSON.<span class="apidocCodeKeywordSpan">stringify</span>({
+        node: &#x27;project&#x27;
+      }), cb)
+    }
+  })
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.observ_class_hook" id="apidoc.module.loop-drop.observ_class_hook">module loop-drop.observ_class_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_class_hook.observ_class_hook" id="apidoc.element.loop-drop.observ_class_hook.observ_class_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>observ_class_hook
+        <span class="apidocSignatureSpan">(obs, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservClassHook(obs, className){
+  if (!(this instanceof ObservClassHook)) return new ObservClassHook(obs, className)
+  this.obs = obs
+  this.className = className
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.observ_class_hook.prototype" id="apidoc.module.loop-drop.observ_class_hook.prototype">module loop-drop.observ_class_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_class_hook.prototype.hook" id="apidoc.element.loop-drop.observ_class_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.observ_class_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, prev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, prev){
+  var self = this
+  if (!prev || prev.obs !== self.obs){
+    self.removeListener &#x26;&#x26; self.removeListener()
+    if (self.obs){
+      nextTick(function(){
+        self.removeListener = watch(self.obs, update.bind(node, self.className))
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_class_hook.prototype.unhook" id="apidoc.element.loop-drop.observ_class_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.observ_class_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next){
+  if (next){
+    next.removeListener = this.removeListener
+  } else {
+    this.removeListener &#x26;&#x26; this.removeListener()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.observ_style_hook" id="apidoc.module.loop-drop.observ_style_hook">module loop-drop.observ_style_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_style_hook.observ_style_hook" id="apidoc.element.loop-drop.observ_style_hook.observ_style_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>observ_style_hook
+        <span class="apidocSignatureSpan">(obs, prop, getValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservStyleHook(obs, prop, getValue){
+  if (!(this instanceof ObservStyleHook)) return new ObservStyleHook(obs, prop, getValue)
+  this.obs = obs
+  this.prop = prop
+  this.getValue = getValue
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.observ_style_hook.prototype" id="apidoc.module.loop-drop.observ_style_hook.prototype">module loop-drop.observ_style_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_style_hook.prototype.hook" id="apidoc.element.loop-drop.observ_style_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.observ_style_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, prev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, prev){
+  var self = this
+  if (typeof self.obs === &#x27;function&#x27;) {
+    update.call(node, self.prop, self.getValue, self.obs())
+  }
+  if (!prev || prev.obs !== self.obs){
+    self.removeListener &#x26;&#x26; self.removeListener()
+    if (self.obs){
+      nextTick(function(){
+        self.removeListener = watch(self.obs, update.bind(node, self.prop, self.getValue))
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_style_hook.prototype.unhook" id="apidoc.element.loop-drop.observ_style_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.observ_style_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next){
+  node.style[this.prop] = &#x27;&#x27;
+  if (next){
+    next.removeListener = this.removeListener
+  } else {
+    this.removeListener &#x26;&#x26; this.removeListener()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.observ_value_hook" id="apidoc.module.loop-drop.observ_value_hook">module loop-drop.observ_value_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_value_hook.observ_value_hook" id="apidoc.element.loop-drop.observ_value_hook.observ_value_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>observ_value_hook
+        <span class="apidocSignatureSpan">(obs, getValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservValueHook(obs, getValue){
+  if (!(this instanceof ObservValueHook)) return new ObservValueHook(obs, getValue)
+  this.obs = obs
+  this.getValue = getValue
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.observ_value_hook.prototype" id="apidoc.module.loop-drop.observ_value_hook.prototype">module loop-drop.observ_value_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_value_hook.prototype.handleEvent" id="apidoc.element.loop-drop.observ_value_hook.prototype.handleEvent">
+        function <span class="apidocSignatureSpan">loop-drop.observ_value_hook.prototype.</span>handleEvent
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handleEvent = function (e) {
+  this.obs.set(parseFloat(e.currentTarget.value||0))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_value_hook.prototype.hook" id="apidoc.element.loop-drop.observ_value_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.observ_value_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, prev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, prev){
+  var self = this
+  node.addEventListener(&#x27;input&#x27;, this)
+  if (!prev || prev.obs !== self.obs){
+    self.removeListener &#x26;&#x26; self.removeListener()
+    if (self.obs){
+      nextTick(function(){
+        self.removeListener = watch(self.obs, update.bind(node, prop, self.getValue))
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.observ_value_hook.prototype.unhook" id="apidoc.element.loop-drop.observ_value_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.observ_value_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next){
+  node.removeEventListener(&#x27;input&#x27;, this)
+  if (next){
+    next.removeListener = this.removeListener
+  } else {
+    this.removeListener &#x26;&#x26; this.removeListener()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.query_param" id="apidoc.module.loop-drop.query_param">module loop-drop.query_param</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.query_param.query_param" id="apidoc.element.loop-drop.query_param.query_param">
+        function <span class="apidocSignatureSpan">loop-drop.</span>query_param
+        <span class="apidocSignatureSpan">(target, query, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function QueryParam(target, query, defaultValue){
+  if (!(this instanceof QueryParam)) return new QueryParam(target, query, defaultValue)
+  this.target = target
+  this.query = query
+  this.defaultValue = defaultValue
+  this.context = target.context
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.query_param.prototype" id="apidoc.module.loop-drop.query_param.prototype">module loop-drop.query_param.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.query_param.prototype.read" id="apidoc.element.loop-drop.query_param.prototype.read">
+        function <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (){
+  var res = jsonQuery(this.query, {data: read(this.target)})
+
+  // fallback to inner value
+  res = res.value === undefined &#x26;&#x26; this.target.node ?
+    jsonQuery(this.query, {data: read(this.target.node)}) : res
+
+  return res.value === undefined ? this.defaultValue : res.value
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return JSON.parse(JSON.stringify(obj))
+}
+
+function read(target){
+  if (typeof target === &#x27;function&#x27;){
+    return target()
+  } else if (target &#x26;&#x26; target.read){
+    return target.<span class="apidocCodeKeywordSpan">read</span>()
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.query_param.prototype.set" id="apidoc.element.loop-drop.query_param.prototype.set">
+        function <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>set
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (value){
+  var newObject = obtain(read(this.target))
+
+  var res = jsonQuery(this.query, {data: newObject, force: this.defaultValue})
+  var obj = jsonQuery.lastParent(res)
+
+  if (obj){
+    if (value === undefined){
+      delete obj[res.key]
+    } else {
+      obj[res.key] = value
+    }
+    this.target.set(newObject)
+    return true
+  } else {
+    return false
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// midi ports
+var midiPorts = Observ()
+midiPorts.open = MidiStream
+midiPorts.openInput = MidiStream.openInput
+midiPorts.openOutput = MidiStream.openOutput
+
+MidiStream.watchPortNames(function (ports) {
+midiPorts.<span class="apidocCodeKeywordSpan">set</span>(ports)
+})
+
+// create root context
+var audioContext = new global.AudioContext()
+var nodes = require(&#x27;./nodes&#x27;)
+var rootContext = window.rootContext = {
+fs: fs,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.query_param.prototype.write" id="apidoc.element.loop-drop.query_param.prototype.write">
+        function <span class="apidocSignatureSpan">loop-drop.query_param.prototype.</span>write
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (value){
+  var newObject = obtain(read(this.target))
+
+  var res = jsonQuery(this.query, {data: newObject, force: this.defaultValue})
+  var obj = jsonQuery.lastParent(res)
+
+  if (obj){
+    if (value === undefined){
+      delete obj[res.key]
+    } else {
+      obj[res.key] = value
+    }
+    this.target.set(newObject)
+    return true
+  } else {
+    return false
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var listeners = [
+  ports(refresh)
+]
+
+obs.stream.write = function (value) {
+  if (obs.stream()) {
+    obs.stream().<span class="apidocCodeKeywordSpan">write</span>(value)
+  }
+}
+
+obs.grab = function () {
+  var stack = stacks.get(obs())
+  if (stack &#x26;&#x26; last(stack) !== obs) {
+    var lastTop = last(stack)
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.rename_hook" id="apidoc.module.loop-drop.rename_hook">module loop-drop.rename_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.rename_hook" id="apidoc.element.loop-drop.rename_hook.rename_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>rename_hook
+        <span class="apidocSignatureSpan">(obs, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RenameHook(obs, options) {
+  if (!(this instanceof RenameHook)) return new RenameHook(obs, options)
+  this.enabled = options.enabled
+  this.onChange = options.onChange
+  this.object = obs
+  lookup.set(obs, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.cancel" id="apidoc.element.loop-drop.rename_hook.cancel">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>cancel
+        <span class="apidocSignatureSpan">(obs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function (obs) {
+  var hook = RenameHook.get(obs)
+  if (hook) {
+    hook.save()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var hook = this.hook
+  if (hook){
+    if (e.type === &#x27;keydown&#x27;){
+      if (e.keyCode === 13){ // enter
+        hook.save()
+        e.preventDefault()
+      } else if (e.keyCode === 27){ // esc
+        hook.<span class="apidocCodeKeywordSpan">cancel</span>()
+      }
+    } else if (e.type === &#x27;blur&#x27;){
+      hook.save()
+    }
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.get" id="apidoc.element.loop-drop.rename_hook.get">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>get
+        <span class="apidocSignatureSpan">(obs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (obs) {
+  if (obs) {
+    return lookup.get(obs)
+  } else if (renaming) {
+    return lookup.get(renaming)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var paramLookup = Observ()
+
+function refresh () {
+  var result = extend(rootParams())
+  var rawResult = extend(rootParams._raw)
+  for (var i = 0; i &#x3c; params.length; i++) {
+    var key = params[i]
+    var override = paramOverrideStack.<span class="apidocCodeKeywordSpan">get</span>(paramOverrideStack.getLength() - 1)
+    if (override &#x26;&#x26; override[i] != null) {
+      result[key] = typeof override[i] === &#x27;function&#x27; ? override[i]() : override[i] || 0
+      rawResult[key] = override[i]
+    } else {
+      result[key] = 0
+      rawResult[key] = 0
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.rename" id="apidoc.element.loop-drop.rename_hook.rename">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>rename
+        <span class="apidocSignatureSpan">(obs, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rename = function (obs, cb) {
+  setTimeout(function () {
+    var hook = lookup.get(obs)
+    if (hook) {
+      hook.rename(cb)
+    }
+  }, 50)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+}
+
+RenameHook.rename = function (obs, cb) {
+setTimeout(function () {
+  var hook = lookup.get(obs)
+  if (hook) {
+    hook.<span class="apidocCodeKeywordSpan">rename</span>(cb)
+  }
+}, 50)
+}
+
+RenameHook.save = function (obs) {
+var hook = RenameHook.get(obs)
+if (hook) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.save" id="apidoc.element.loop-drop.rename_hook.save">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.</span>save
+        <span class="apidocSignatureSpan">(obs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (obs) {
+  var hook = RenameHook.get(obs)
+  if (hook) {
+    hook.save()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function handleEvent(e){
+var hook = this.hook
+if (hook){
+  if (e.type === &#x27;keydown&#x27;){
+    if (e.keyCode === 13){ // enter
+      hook.<span class="apidocCodeKeywordSpan">save</span>()
+      e.preventDefault()
+    } else if (e.keyCode === 27){ // esc
+      hook.cancel()
+    }
+  } else if (e.type === &#x27;blur&#x27;){
+    hook.save()
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.rename_hook.prototype" id="apidoc.module.loop-drop.rename_hook.prototype">module loop-drop.rename_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.prototype.cancel" id="apidoc.element.loop-drop.rename_hook.prototype.cancel">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>cancel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function () {
+  if (renaming === this.object) {
+    this.node.textContent = QueryParam(this.object, &#x27;id&#x27;).read()
+    this.node.contentEditable = false
+    clearSelection()
+    renaming = null
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var hook = this.hook
+  if (hook){
+    if (e.type === &#x27;keydown&#x27;){
+      if (e.keyCode === 13){ // enter
+        hook.save()
+        e.preventDefault()
+      } else if (e.keyCode === 27){ // esc
+        hook.<span class="apidocCodeKeywordSpan">cancel</span>()
+      }
+    } else if (e.type === &#x27;blur&#x27;){
+      hook.save()
+    }
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.prototype.hook" id="apidoc.element.loop-drop.rename_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, current)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, current) {
+  if (current) {
+    node.textContent = QueryParam(this.object, &#x27;id&#x27;).read()
+    this.listener = current.listener
+    this.listener.hook = this
+  } else {
+    this.listener = {
+      handleEvent: handleEvent,
+      hook: this
+    }
+    node.textContent = QueryParam(this.object, &#x27;id&#x27;).read()
+    node.addEventListener(&#x27;mouseup&#x27;, this.listener, true)
+    node.addEventListener(&#x27;dblclick&#x27;, this.listener, true)
+    node.addEventListener(&#x27;blur&#x27;, this.listener, true)
+    node.addEventListener(&#x27;keydown&#x27;, this.listener, true)
+  }
+
+  this.node = node
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.prototype.rename" id="apidoc.element.loop-drop.rename_hook.prototype.rename">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>rename
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rename = function (cb) {
+  if (renaming !== this.object &#x26;&#x26; resolve(this.enabled)) {
+    this.node.contentEditable = true
+    renaming = this.object
+
+    var id = QueryParam(this.object, &#x27;id&#x27;)
+    this.node.textContent = id.read()
+    selectInside(this.node)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+}
+
+RenameHook.rename = function (obs, cb) {
+setTimeout(function () {
+  var hook = lookup.get(obs)
+  if (hook) {
+    hook.<span class="apidocCodeKeywordSpan">rename</span>(cb)
+  }
+}, 50)
+}
+
+RenameHook.save = function (obs) {
+var hook = RenameHook.get(obs)
+if (hook) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.prototype.save" id="apidoc.element.loop-drop.rename_hook.prototype.save">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>save
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function () {
+  if (renaming === this.object) {
+    var context = this.object.context
+    var id = QueryParam(this.object, &#x27;id&#x27;)
+    this.lastValue = id.read()
+    this.value = this.node.textContent.trim()
+
+    this.node.contentEditable = false
+    clearSelection()
+
+    if (this.value !== this.lastValue) {
+      if (context &#x26;&#x26; context.collection &#x26;&#x26; context.collection.resolveAvailable) {
+        this.value = context.collection.resolveAvailable(this.value)
+      }
+
+      id.set(this.value)
+
+      if (this.onChange) {
+        this.onChange(this.lastValue, this.value, this.object)
+      }
+    }
+
+    renaming = null
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function handleEvent(e){
+var hook = this.hook
+if (hook){
+  if (e.type === &#x27;keydown&#x27;){
+    if (e.keyCode === 13){ // enter
+      hook.<span class="apidocCodeKeywordSpan">save</span>()
+      e.preventDefault()
+    } else if (e.keyCode === 27){ // esc
+      hook.cancel()
+    }
+  } else if (e.type === &#x27;blur&#x27;){
+    hook.save()
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_hook.prototype.unhook" id="apidoc.element.loop-drop.rename_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.rename_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next) {
+  if (!next) {
+    node.removeEventListener(&#x27;mouseup&#x27;, this.listener, true)
+    node.removeEventListener(&#x27;dblclick&#x27;, this.listener, true)
+    node.removeEventListener(&#x27;blur&#x27;, this.listener, true)
+    node.removeEventListener(&#x27;keydown&#x27;, this.listener, true)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.rename_widget" id="apidoc.module.loop-drop.rename_widget">module loop-drop.rename_widget</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_widget.rename_widget" id="apidoc.element.loop-drop.rename_widget.rename_widget">
+        function <span class="apidocSignatureSpan">loop-drop.</span>rename_widget
+        <span class="apidocSignatureSpan">(fileName, saveRename, cancelRename, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renameElement(fileName, saveRename, cancelRename, data){
+  if (!(this instanceof renameElement)) return new renameElement(fileName, saveRename, cancelRename, data)
+  this.fileName = fileName
+  this.saveRename = saveRename
+  this.cancelRename = cancelRename
+  this.data = data
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.rename_widget.prototype" id="apidoc.module.loop-drop.rename_widget.prototype">module loop-drop.rename_widget.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_widget.prototype.getValue" id="apidoc.element.loop-drop.rename_widget.prototype.getValue">
+        function <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>getValue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getValue = function (){
+  return this.element.textContent.trim() + this.element.dataset.extname
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+element.contentEditable = true
+nextTick(function(){
+  selectInside(element)
+})
+
+function save () {
+  if (element.context.<span class="apidocCodeKeywordSpan">getValue</span>() !== element.context.fileName) {
+    element.context.saveRename()
+  } else {
+    element.context.cancelRename()
+  }
+}
+
+return element
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_widget.prototype.init" id="apidoc.element.loop-drop.rename_widget.prototype.init">
+        function <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (){
+  var element = document.createElement(&#x27;span&#x27;)
+  this.element = element
+  element.context = this
+  element.dataset.extname = getExtName(this.fileName)
+  element.textContent = getBaseName(this.fileName, element.dataset.extname)
+  element.onkeydown = function(e){
+    if (event.keyCode === 13){
+      save()
+      return false
+    } else if (event.keyCode === 27){
+      element.context.cancelRename()
+      return false
+    }
+  }
+  element.onblur = function handleRenameBlur(e){
+    nextTick(function(){
+      if (element.parentNode &#x26;&#x26; element.context){
+        // only save if still active!
+        save()
+      }
+    })
+  }
+  element.contentEditable = true
+  nextTick(function(){
+    selectInside(element)
+  })
+
+  function save () {
+    if (element.context.getValue() !== element.context.fileName) {
+      element.context.saveRename()
+    } else {
+      element.context.cancelRename()
+    }
+  }
+
+  return element
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return createElement(h(&#x27;div&#x27;))
+}
+}
+
+SubLoop.prototype.update = function (prev, elem) {
+this.releases = prev.releases
+if (!eq(this.observ, prev.observ) || this.render !== prev.render) {
+  return this.<span class="apidocCodeKeywordSpan">init</span>()
+}
+}
+
+SubLoop.prototype.destroy = function (prev, elem) {
+while (this.releases.length) {
+  this.releases.pop()()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.rename_widget.prototype.update" id="apidoc.element.loop-drop.rename_widget.prototype.update">
+        function <span class="apidocSignatureSpan">loop-drop.rename_widget.prototype.</span>update
+        <span class="apidocSignatureSpan">(prev, element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (prev, element){
+  element.context = this
+  this.element = element
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return renderer.target
+
+// scoped
+
+function update () {
+  // render!
+  renderer.<span class="apidocCodeKeywordSpan">update</span>(project)
+}
+}
+
+function ensureProject (path, cb) {
+rootContext.fs.exists(path, function (exists) {
+  if (exists) {
+    cb()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.sub_loop" id="apidoc.module.loop-drop.sub_loop">module loop-drop.sub_loop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.sub_loop.sub_loop" id="apidoc.element.loop-drop.sub_loop.sub_loop">
+        function <span class="apidocSignatureSpan">loop-drop.</span>sub_loop
+        <span class="apidocSignatureSpan">(observ, render)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SubLoop(observ, render) {
+  if (!(this instanceof SubLoop)) return new SubLoop(observ, render)
+  this.observ = observ
+  this.render = render
+  this.releases = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.sub_loop.prototype" id="apidoc.module.loop-drop.sub_loop.prototype">module loop-drop.sub_loop.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.sub_loop.prototype.destroy" id="apidoc.element.loop-drop.sub_loop.prototype.destroy">
+        function <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(prev, elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (prev, elem) {
+  while (this.releases.length) {
+    this.releases.pop()()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+module.exports = function (obs) {
+  Object.keys(obs).forEach(function (key) {
+    if (obs[key] &#x26;&#x26; typeof obs[key].destroy === &#x27;function&#x27;) {
+      obs[key].<span class="apidocCodeKeywordSpan">destroy</span>()
+    }
+  })
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.sub_loop.prototype.init" id="apidoc.element.loop-drop.sub_loop.prototype.init">
+        function <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  while (this.releases.length) {
+    this.releases.pop()()
+  }
+
+  if (typeof this.render === &#x27;function&#x27;) {
+    var observs = Array.isArray(this.observ) ? this.observ : [ this.observ ]
+    var loop = MainLoop(null, () =&#x3e; { return this.render(...observs) }, VirtualDom)
+    observs.forEach((obs) =&#x3e; typeof obs === &#x27;function&#x27; &#x26;&#x26; this.releases.push(obs(loop.update)))
+    return loop.target
+  } else {
+    return createElement(h(&#x27;div&#x27;))
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return createElement(h(&#x27;div&#x27;))
+}
+}
+
+SubLoop.prototype.update = function (prev, elem) {
+this.releases = prev.releases
+if (!eq(this.observ, prev.observ) || this.render !== prev.render) {
+  return this.<span class="apidocCodeKeywordSpan">init</span>()
+}
+}
+
+SubLoop.prototype.destroy = function (prev, elem) {
+while (this.releases.length) {
+  this.releases.pop()()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.sub_loop.prototype.update" id="apidoc.element.loop-drop.sub_loop.prototype.update">
+        function <span class="apidocSignatureSpan">loop-drop.sub_loop.prototype.</span>update
+        <span class="apidocSignatureSpan">(prev, elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (prev, elem) {
+  this.releases = prev.releases
+  if (!eq(this.observ, prev.observ) || this.render !== prev.render) {
+    return this.init()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return renderer.target
+
+// scoped
+
+function update () {
+  // render!
+  renderer.<span class="apidocCodeKeywordSpan">update</span>(project)
+}
+}
+
+function ensureProject (path, cb) {
+rootContext.fs.exists(path, function (exists) {
+  if (exists) {
+    cb()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.wave_hook" id="apidoc.module.loop-drop.wave_hook">module loop-drop.wave_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.wave_hook.wave_hook" id="apidoc.element.loop-drop.wave_hook.wave_hook">
+        function <span class="apidocSignatureSpan">loop-drop.</span>wave_hook
+        <span class="apidocSignatureSpan">(context, src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WaveHook(context, src) {
+  if (!(this instanceof WaveHook)) {
+    return new WaveHook(context, src)
+  }
+  this.context = context
+  this.src = src
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.loop-drop.wave_hook.prototype" id="apidoc.module.loop-drop.wave_hook.prototype">module loop-drop.wave_hook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.wave_hook.prototype.hook" id="apidoc.element.loop-drop.wave_hook.prototype.hook">
+        function <span class="apidocSignatureSpan">loop-drop.wave_hook.prototype.</span>hook
+        <span class="apidocSignatureSpan">(node, prop, prev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function (node, prop, prev) {
+  if (!prev || prev.src !== this.src) {
+    node.innerHTML = &#x27;&#x27;
+    var path = resolve(this.context.cwd, this.src)
+    if (!cache[path]) {
+      cache[path] = WaveSvg(path, this.context)
+    }
+
+    waitForLoad(cache[path], function () {
+      node.innerHTML = cache[path]()
+      var svg = node.querySelector(&#x27;svg&#x27;)
+      if (svg) {
+        this.release = cache[path].onAppendChild(function (fragment) {
+          svg.insertAdjacentHTML(&#x27;afterbegin&#x27;, fragment)
+        })
+      }
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.loop-drop.wave_hook.prototype.unhook" id="apidoc.element.loop-drop.wave_hook.prototype.unhook">
+        function <span class="apidocSignatureSpan">loop-drop.wave_hook.prototype.</span>unhook
+        <span class="apidocSignatureSpan">(node, prop, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unhook = function (node, prop, next) {
+  if (this.release) {
+    this.release()
+    this.release = null
+  }
+  if (next &#x26;&#x26; next._type === &#x27;WaveHook&#x27;) {
+    return
+  }
+  node.innerHTML = &#x27;&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
